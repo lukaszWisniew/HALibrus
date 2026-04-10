@@ -1,0 +1,14 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "interval": "Interwał (15–720 minut)"
+        },
+        "data_description": {
+          "interval": "(En)To jest test 123"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+	  "name": "Nazwa połączenia",
+	  "login": "Nazwa użytkownika do Librusa",
+	  "password": "Hasło do konta w Librusie",
+          "interval": "Interwał (15–720 minut)"
+        },
+        "data_description": {
+          "interval": "Co jaki czas odpytywać Librusa."
+        }
+      }
+    }
+  }
+}
