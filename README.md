@@ -93,8 +93,6 @@ Poniedziałek
 11:00  Informatyka
 ```
 
-Rekomendowane jest dodanie tutaj zrzutu ekranu przedstawiającego plan lekcji w Home Assistant z wykorzystaniem Week Planner Card.
-
 ## Dane logowania
 
 HALibrus wymaga danych logowania do **konta ucznia w Librusie**.
