@@ -3,10 +3,13 @@
     "step": {
       "user": {
         "data": {
-          "interval": "Interwał (15–720 minut)"
+	  "name": "Connection name",
+	  "login": "Librus username",
+	  "password": "Librus account password",
+          "interval": "Interval (15–720 minutes)"
         },
         "data_description": {
-          "interval": "(En)To jest test 123"
+          "interval": "How often to query Librus."
         }
       }
     }

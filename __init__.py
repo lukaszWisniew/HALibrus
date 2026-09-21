@@ -1,4 +1,7 @@
+"""Integracja Librus Synergia dla Home Assistant."""
+
 import logging
+
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 
@@ -9,6 +12,15 @@ _LOGGER = logging.getLogger(__name__)
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
+    """Konfiguruje wpis integracji Librus.
+
+    Args:
+        hass: Instancja Home Assistant.
+        entry: Wpis konfiguracyjny integracji.
+
+    Returns:
+        ``True`` po prawidłowym skonfigurowaniu wpisu.
+    """
     coordinator = LibrusCoordinator(hass, entry)
 
     await coordinator.async_config_entry_first_refresh()
@@ -24,10 +36,20 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
 
 async def update_listener(hass: HomeAssistant, entry: ConfigEntry):
+    """Przeładowuje wpis konfiguracyjny po zmianie jego opcji."""
     await hass.config_entries.async_reload(entry.entry_id)
 
 
 async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry):
+    """Usuwa wpis integracji Librus.
+
+    Args:
+        hass: Instancja Home Assistant.
+        entry: Wpis konfiguracyjny integracji.
+
+    Returns:
+        ``True`` po prawidłowym usunięciu wpisu.
+    """
     unload_ok = await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
 
     if unload_ok:
