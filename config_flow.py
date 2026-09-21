@@ -57,7 +57,7 @@ class LibrusConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                     vol.Required(CONF_PASSWORD): str,
                     vol.Required(CONF_INTERVAL, default=120): selector.NumberSelector(
                          selector.NumberSelectorConfig(
-                           min=1,
+                           min=15,
                            max=720,
                            step=1,
                            unit_of_measurement="minutes",
