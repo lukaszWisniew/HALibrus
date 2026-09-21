@@ -49,14 +49,6 @@ Struktura katalogów powinna wyglądać podobnie do:
 
 Po skopiowaniu plików uruchom ponownie Home Assistant.
 
-### HACS
-
-Jeżeli integracja jest dostępna w HACS, można ją zainstalować z poziomu:
-
-**HACS → Integracje → HALibrus**
-
-Po instalacji należy ponownie uruchomić Home Assistant.
-
 ## Konfiguracja
 
 Po ponownym uruchomieniu Home Assistant przejdź do:
