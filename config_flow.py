@@ -1,3 +1,5 @@
+"""Przepływ konfiguracji integracji Librus Synergia."""
+
 import logging
 import voluptuous as vol
 
@@ -12,11 +14,19 @@ _LOGGER = logging.getLogger(__name__)
 
 
 class LibrusConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
+    """Przepływ konfiguracji zbierający dane dostępowe do Librus."""
 
     VERSION = 1
 
     async def async_step_user(self, user_input=None):
+        """Obsługuje krok konfiguracji inicjowany przez użytkownika.
 
+        Args:
+            user_input: Dane wprowadzone przez użytkownika lub ``None``.
+
+        Returns:
+            Wynik utworzenia wpisu albo formularz konfiguracji.
+        """
         errors = {}
 
         if user_input is not None:
@@ -47,7 +57,7 @@ class LibrusConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                     vol.Required(CONF_PASSWORD): str,
                     vol.Required(CONF_INTERVAL, default=120): selector.NumberSelector(
                          selector.NumberSelectorConfig(
-                           min=1,
+                           min=15,
                            max=720,
                            step=1,
                            unit_of_measurement="minutes",
